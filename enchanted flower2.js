@@ -161,3 +161,28 @@ function createHeart() {
 
 // Create hearts at intervals
 setInterval(createHeart, 500); // Adjust frequency as needed
+
+
+window.addEventListener('load', function() {
+    document.getElementById('castle').addEventListener('click', playMusic);
+});
+
+let audio = document.querySelector('audio');
+
+function playMusic() {
+    // Check if the audio is already playing
+    if (audio.paused) {
+        audio.play().catch(error => {
+            console.error("Playback failed:", error);
+            // Handle the error or show a message to the user
+        });
+    }
+}
+
+// Ensure audio is not muted on load
+window.addEventListener('load', function() {
+    audio.muted = false;
+});
+
+// Add event listener for the castle click
+document.getElementById('castle').addEventListener('click', playMusic);
