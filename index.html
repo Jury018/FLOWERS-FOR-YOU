@@ -7,7 +7,7 @@
     <title>FLOWERS FOR YOU</title>
 </head>
 <body>
-    <div id="castle" onclick="playMusic()">
+    <div id="castle">
         <div id="table"></div>
         <div class="shade-wrap hover-animation" id="main">
             <div id="flower-wrap">
@@ -32,7 +32,7 @@
             <i>
                 <p class="lyric delay-1">Do you think I have forgotten</p>
                 <p class="lyric delay-2">About you?</p>
-            <p class="lyric delay-3">There was something about you</p>
+                <p class="lyric delay-3">There was something about you</p>
                 <p class="lyric delay-4">that now I can't remember</p>
                 <p class="lyric delay-5">It's the same damn thing</p>
                 <p class="lyric delay-6">that made my heart surrender</p>
@@ -50,10 +50,14 @@
         </div>
     </div>
 
- <div id="petals-container">
-    <div class="heart"></div>
-    <div class="heart"></div>
-</div>  
+    <div id="petals-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Play Music Button -->
+    <button id="play-music-btn">Play Music</button>
+
     <script src="enchanted flower2.js"></script>
     <script>
         let musicPlayed = false; // Flag to track if music has played
@@ -64,11 +68,20 @@
                 audio.muted = false;  // Unmute audio
                 audio.currentTime = 0; // Reset audio to start
                 setTimeout(function() {
-                    audio.play();  // Play the audio after 0.8 seconds
+                    audio.play().catch(function(error) {
+                        console.error("Audio failed to play: ", error);
+                    });
                 }, 800); // 800 milliseconds delay
                 musicPlayed = true; // Set the flag to true to prevent future plays
             }
         }
+
+        // Add click event listener to the button
+        document.getElementById('play-music-btn').addEventListener('click', function() {
+            playMusic();
+            // Optionally, hide the button after music starts
+            this.style.display = 'none';
+        });
     </script>
 </body>
 </html>
