@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="enchanted flower2.css" />
+    <title>FLOWERS FOR YOU</title>
+</head>
+<body>
+    <div id="castle" onclick="playMusic()">
+        <div id="table"></div>
+        <div class="shade-wrap hover-animation" id="main">
+            <div id="flower-wrap">
+                <div id="stem"></div>
+                <div id="petal1"></div>
+                <div id="petal2"></div>
+                <div id="petal3"></div>
+                <div id="petal4"></div>
+                <div id="petal5"></div>
+                <div id="falling-petal"></div>
+                <div id="leaf1"></div>
+                <div id="leaf2"></div>
+            </div>
+        </div>
+
+        <audio id="background-music">
+            <source src="about you.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Lyrics Section -->
+        <div id="lyrics-section">
+            <i>
+                <p class="lyric delay-1">Do you think I have forgotten</p>
+                <p class="lyric delay-2">About you?</p>
+            <p class="lyric delay-3">There was something about you</p>
+                <p class="lyric delay-4">that now I can't remember</p>
+                <p class="lyric delay-5">It's the same damn thing</p>
+                <p class="lyric delay-6">that made my heart surrender</p>
+            </i>
+        </div>
+
+        <div class="shade-wrap" id="sub">
+            <div id="shade-main-reflections"></div>
+            <div id="shade-main">
+                <div id="shade-handle-big"></div>
+                <div id="shade-handle-small"></div>
+                <div id="top-reflection"></div>
+                <div id="bottom-shade"></div>
+            </div>
+        </div>
+    </div>
+
+ <div id="petals-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
+</div>  
+    <script src="enchanted flower2.js"></script>
+    <script>
+        let musicPlayed = false; // Flag to track if music has played
+
+        function playMusic() {
+            if (!musicPlayed) { // Check if music has not been played
+                let audio = document.getElementById('background-music');
+                audio.muted = false;  // Unmute audio
+                audio.currentTime = 0; // Reset audio to start
+                setTimeout(function() {
+                    audio.play();  // Play the audio after 0.8 seconds
+                }, 800); // 800 milliseconds delay
+                musicPlayed = true; // Set the flag to true to prevent future plays
+            }
+        }
+    </script>
+</body>
+</html>
