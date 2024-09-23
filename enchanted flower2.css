@@ -543,5 +543,22 @@
     }
 }
 
+#play-music-btn {
+    position: fixed;
+    bottom: 10px; /* Adjust distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it stays centered */
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+#play-music-btn:hover {
+    background-color: transparent; /* Keep background transparent on hover */
+}
   
   /* revised by bon*/
