@@ -1,7 +1,7 @@
 * {
   margin: 0;
-  padding: 0;
-}
+  padding:0;
+}               }
 
 .hover-animation {
   animation: hover 1.75s ease-in-out infinite;
@@ -343,17 +343,6 @@
   }
 }
 
-.lyrics {
-  position: absolute;
-  left: 20%;
-  top:5%;
-  transform: translateX(-50%);
-  color: white; /* Font color set to white */
-  font-size: 1.5rem; /* Adjust font size as needed */
-  text-align: center;
-  z-index: 100; /* Ensure it's above other elements */
-  font-family: 'Aptos', serif; /* Set the font to Aptos serif */
-}
 
 #audio-control {
   position: absolute;
@@ -361,23 +350,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 200;
-}
-
-.button {
-  background-color: transparent; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.button:hover {
-  background-color: transparent;
 }
 
 
@@ -391,42 +363,6 @@
   text-align: center;
   z-index: 100; /* Ensure it's above other elements */
   font-family: 'Aptos', serif; /* Set the font to Aptos serif */
-}
-
-.lyric {
-  opacity: 0;
-  font-size: 1.5rem;
-  animation: fadeIn 1.5s forwards;
-  font-family: 'Aptos', serif; /* Make sure the font is consistent */
-}
-
-.delay-1 {
-  animation-delay: 1.0s;
-}
-
-.delay-2 {
-  animation-delay: 2s;
-}
-
-.delay-3 {
-  animation-delay: 3.5s;
-}
-
-.delay-4 {
-  animation-delay: 5s;
-}
-
-.delay-5 {
-  animation-delay: 6.5s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .lyric {
@@ -446,20 +382,6 @@
   z-index: 200;
 }
 
-.lyric {
-  opacity: 0;
-  font-size: 1.0rem; /* Increased size */
-  animation: fadeIn 1.5s forwards;
-  font-family: 'Aptos', serif; 
-  color: #f0f0f0; /* Lighter color */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Enhanced shadow */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .hover-animation {
     animation: hover 1.75s ease-in-out infinite;
 }
@@ -472,12 +394,12 @@
     overflow: hidden;
 }
 
-/* Other existing styles... */
+/* BELOW IS THE ORIGINAL LYRICS SECTION  */
 
 #lyrics-section {
     position: absolute;
     left: 50%;
-    top: 15%; /* Keep this consistent */
+    top: 13%; /* Keep this consistent */
     transform: translateX(-50%);
     z-index: 100; /* Ensure it's above other elements */
     text-align: center; /* Center lyrics */
@@ -542,4 +464,6 @@
         text-shadow:#e31e1e ; /* Remove glow */
     }
 }
+
+
   /* revised by bon*/
